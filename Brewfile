@@ -8,8 +8,6 @@ tap 'homebrew/bundle'
 # Install Binaries
 brew 'awscli'
 brew 'heroku'
-brew 'zsh'
-brew 'zsh-completions'
 brew 'mackup'
 
 # Development
@@ -20,7 +18,6 @@ brew 'mysql'
 brew 'postgresql'
 
 # Apps
-cask 'iterm2'
 cask 'alfred'
 cask 'docker'
 cask 'google-chrome'
