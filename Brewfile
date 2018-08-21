@@ -28,6 +28,7 @@ cask 'skype'
 cask 'teamviewer'
 cask 'android-studio'
 cask 'telegram'
+cask 'evernote'
 
 # Quicklook
 cask 'qlcolorcode'
