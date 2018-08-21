@@ -1,0 +1,20 @@
+# Settings
+- defaults:
+    link:
+      create: true
+      relink: true
+      force: true # Swap the original file
+
+# Clean dead links that point to the dotfiles dir
+- clean: ['~', '~/.config']
+
+# Run shell commands
+- shell:
+    # Install submodules
+    - [git submodule update --init --recursive, Installing submodules]
+
+# Symlink files
+- link:
+    # Zsh
+    ~/.zshrc: zsh/zshrc.zsh
+
