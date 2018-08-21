@@ -13,8 +13,7 @@ function install_brew {
 function install_terminal {
   brew install zsh
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-  export ZSH_CUSTOM=~/.oh-my-zsh
-  git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+  git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
   git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
   brew cask install iterm2
@@ -48,8 +47,8 @@ function install_ruby_on_rails {
 }
 
 install_dotfiles
-install_brew
 install_terminal
+install_brew
 install_ruby_on_rails
 
 # Update Homebrew recipes
@@ -65,6 +64,7 @@ ln -s $HOME/.dotfiles/.mackup.cfg $HOME/.mackup.cfg
 # Set macOS preferences
 # We will run this last because this will reload the shell
 source .macos
+mackup restore
 
 echo "[TODO] Sync setting with iterm"
 echo "[TODO] List of manually install apps:"
@@ -75,3 +75,4 @@ echo "https://itunes.apple.com/us/app/shazam/id897118787?l=fr&mt=12"
 echo "https://www.getpostman.com/apps"
 echo "http://rescuetime.com/"
 echo "https://kapeli.com/dash"
+echo "https://mindnode.com/"
