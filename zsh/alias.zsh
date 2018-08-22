@@ -74,7 +74,9 @@ gct() {
 gcm() {
   git add .;
   git commit -m $1;
+  echo $1;
   branch_name=$(git symbolic-ref --short -q HEAD);
+  echo branch_name
   git push origin $branch_name;
 }
 
