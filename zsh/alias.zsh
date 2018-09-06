@@ -1,7 +1,6 @@
 # Git
 alias gd="git diff @~..@"
 alias grs="git reset HEAD~1"
-alias gst="git status -s"
 alias gsta="git add -A; git stash"
 alias gl="git log --oneline --decorate --color"
 
@@ -72,9 +71,9 @@ gct() {
 }
 
 gcm() {
+  echo $1;
   git add .;
   git commit -m $1;
-  echo $1;
   branch_name=$(git symbolic-ref --short -q HEAD);
   echo branch_name
   git push origin $branch_name;
@@ -90,18 +89,18 @@ run_migrate() {
 }
 
 # Recheck before upload code to github
-recheck() {
-  echo "Run Rubocop"
-  echo "=========================================================================================="
-  bundle exec rubocop --require rubocop/formatter/checkstyle_formatter --rails app/
-  echo "=========================================================================================="
-  echo "Run Rspec test"
-  echo "=========================================================================================="
-  rspec spec/
-  echo "=========================================================================================="
-  echo "Run Brakeman"
-  bundle exec brakeman
-}
+# recheck() {
+#   echo "Run Rubocop"
+#   echo "=========================================================================================="
+#   bundle exec rubocop --require rubocop/formatter/checkstyle_formatter --rails app/
+#   echo "=========================================================================================="
+#   echo "Run Rspec test"
+#   echo "=========================================================================================="
+#   rspec spec/
+#   echo "=========================================================================================="
+#   echo "Run Brakeman"
+#   bundle exec brakeman
+# }
 
 # System
 alias pls="sudo"
