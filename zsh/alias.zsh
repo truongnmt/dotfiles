@@ -1,8 +1,17 @@
 # Git
 alias gd="git diff @~..@"
 alias grs="git reset HEAD~1"
+alias gst="git status -s"
 alias gsta="git add -A; git stash"
 alias gl="git log --oneline --decorate --color"
+alias ga="git add"
+alias gad="git add ."
+
+gcmap() {
+  git commit --amend;
+  branch_name=$(git symbolic-ref --short -q HEAD);
+  git push origin $branch_name -f;
+}
 
 d.() {
   curr_branch=$(git symbolic-ref --short -q HEAD);
@@ -70,23 +79,20 @@ gct() {
   git checkout -b $1;
 }
 
-gcm() {
-  echo $1;
-  git add .;
+gcmp() {
   git commit -m $1;
   branch_name=$(git symbolic-ref --short -q HEAD);
-  echo branch_name
   git push origin $branch_name;
 }
 
 # Rails
-run_migrate() {
-  if rake db:migrate:status | grep down
-  then
-    rake db:migrate
-    return 0;
-  fi
-}
+# run_migrate() {
+#   if rake db:migrate:status | grep down
+#   then
+#     rake db:migrate
+#     return 0;
+#   fi
+# }
 
 # Recheck before upload code to github
 # recheck() {

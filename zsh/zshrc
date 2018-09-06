@@ -61,7 +61,6 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git
   zsh-autosuggestions
 )
 
@@ -97,7 +96,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Alias
-# source $DOTFILE/zsh/alias.zsh
+source $DOTFILE/zsh/alias.zsh
 
 DEFAULT_USER="truongnm"
 
