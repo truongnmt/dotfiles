@@ -133,3 +133,6 @@ alias l="ls"
 alias .='pwd'
 alias ..='cd ..'
 alias ...='cd ../..'
+
+# Quick cd
+alias cdc="cd ~/home/coding/"
