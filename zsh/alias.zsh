@@ -4,8 +4,23 @@ alias grs="git reset HEAD~1"
 alias gst="git status -s"
 alias gsta="git add -A; git stash"
 alias gl="git log --oneline --decorate --color"
-alias ga="git add"
+
+gcb() {
+  git checkout -b $1;
+}
+
+gc() {
+  git checkout $1;
+}
+
 alias gad="git add ."
+alias ga="git add"
+
+gcmp() {
+  git commit -m $1;
+  branch_name=$(git symbolic-ref --short -q HEAD);
+  git push origin $branch_name;
+}
 
 gcmap() {
   git commit --amend;
@@ -22,42 +37,46 @@ d.() {
 gpl() {
   curr_branch=$(git symbolic-ref --short -q HEAD);
   git pull upstream $curr_branch;
-  run_migrate;
 }
 
-gph() {
-  git add -A;
-  git commit -m $1;
-  branch_name=$(git symbolic-ref --short -q HEAD);
-  if gd | grep "binding.pry"
-  then
-    echo "Binding pry detected!"
-    return 0
-  fi
-  git push origin $branch_name;
-  repo_url=$(git config --get remote.origin.url)
-  repo_name=(${=repo_url//:/ })    # Zsh split string to arr T.T
-  google-chrome "https://github.com/${repo_name[2]}"
-  if [ "$(uname)" == "Darwin" ]; then
-    open -a /Applications/Google\ Chrome.app/ -g $repo_url
-  elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
-    google-chrome "https://github.com/${repo_name[1]}"
-  elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ]; then
-      # Do something under Windows NT platform
-  fi
+gfp() {
+  git fetch upstream pull/$1/head:$2;
+  gc $2;
 }
 
-gphf() {
-  git add -A;
-  git commit --amend;
-  branch_name=$(git symbolic-ref --short -q HEAD);
-  if gd | grep "binding.pry"
-  then
-    echo "Binding pry detected!"
-    return 0
-  fi
-  git push origin $branch_name -f;
-}
+# gph() {
+#   git add -A;
+#   git commit -m $1;
+#   branch_name=$(git symbolic-ref --short -q HEAD);
+#   if gd | grep "binding.pry"
+#   then
+#     echo "Binding pry detected!"
+#     return 0
+#   fi
+#   git push origin $branch_name;
+#   repo_url=$(git config --get remote.origin.url)
+#   repo_name=(${=repo_url//:/ })    # Zsh split string to arr T.T
+#   google-chrome "https://github.com/${repo_name[2]}"
+#   if [ "$(uname)" == "Darwin" ]; then
+#     open -a /Applications/Google\ Chrome.app/ -g $repo_url
+#   elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+#     google-chrome "https://github.com/${repo_name[1]}"
+#   elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ]; then
+#       # Do something under Windows NT platform
+#   fi
+# }
+#
+# gphf() {
+#   git add -A;
+#   git commit --amend;
+#   branch_name=$(git symbolic-ref --short -q HEAD);
+#   if gd | grep "binding.pry"
+#   then
+#     echo "Binding pry detected!"
+#     return 0
+#   fi
+#   git push origin $branch_name -f;
+# }
 
 grb() {
   curr_branch=$(git symbolic-ref --short -q HEAD);
@@ -72,17 +91,6 @@ grc() {
   git rebase --continue;
   branch_name=$(git symbolic-ref --short -q HEAD);
   git push origin $branch_name -f;
-}
-
-gct() {
-  git checkout master;
-  git checkout -b $1;
-}
-
-gcmp() {
-  git commit -m $1;
-  branch_name=$(git symbolic-ref --short -q HEAD);
-  git push origin $branch_name;
 }
 
 # Rails

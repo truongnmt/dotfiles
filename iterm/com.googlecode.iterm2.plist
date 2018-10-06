@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>AllowClipboardAccess</key>
+	<true/>
 	<key>AlternateMouseScroll</key>
 	<true/>
 	<key>AppleAntiAliasingThreshold</key>
@@ -658,8 +660,10 @@
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>513 110 701 354 0 0 1280 778 </string>
+	<key>NSWindow Frame SUStatusFrame</key>
+	<string>-1000 578 400 129 -1600 0 1600 900 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>330 290 620 392 0 0 1280 778 </string>
+	<string>330 306 620 392 0 0 1280 800 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 126 606 469 0 0 1280 778 </string>
 	<key>NSWindow Frame SharedPreferences</key>
@@ -667,7 +671,7 @@
 	<key>NSWindow Frame com.apple.typography_panel_SourceCodeProForPowerline-Regular</key>
 	<string>212 385 260 136 0 0 1280 778 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 4 1280 774 0 0 1280 778 </string>
+	<string>0 0 1280 800 0 0 1280 800 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>710 351 570 427 0 0 1280 778 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -2215,11 +2219,11 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-09-06T02:08:01Z</date>
+	<date>2018-10-04T07:24:29Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
-	<true/>
+	<false/>
 	<key>SplitPaneDimmingAmount</key>
 	<real>0.1098407451923077</real>
 	<key>TabStyle</key>
