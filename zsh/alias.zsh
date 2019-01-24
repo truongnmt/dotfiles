@@ -34,9 +34,14 @@ d.() {
   git br -D $curr_branch;
 }
 
-gpl() {
+gplr() {
   curr_branch=$(git symbolic-ref --short -q HEAD);
   git pull upstream $curr_branch;
+}
+
+gplo() {
+  curr_branch=$(git symbolic-ref --short -q HEAD);
+  git pull origin $curr_branch;
 }
 
 gfp() {
@@ -136,3 +141,9 @@ alias ...='cd ../..'
 
 # Quick cd
 alias cdc="cd ~/home/coding/"
+alias cdcbtc="cd ~/go/src/github.com/mf-financial/wallet-btc"
+
+# Coding
+alias dc='docker'
+alias dcc='docker-compose'
+
