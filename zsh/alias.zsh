@@ -1,9 +1,10 @@
 # Git
-alias gd="git diff @~..@"
+alias gd="git diff"
 alias grs="git reset HEAD~1"
-alias gst="git status -s"
+alias gst="git status -s --ignore-submodules=dirty"
 alias gsta="git add -A; git stash"
 alias gl="git log --oneline --decorate --color"
+alias grha="git reset --hard"
 
 gcb() {
   git checkout -b $1;
