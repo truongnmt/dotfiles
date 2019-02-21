@@ -5,6 +5,8 @@ alias gst="git status -s --ignore-submodules=dirty"
 alias gsta="git add -A; git stash"
 alias gl="git log --oneline --decorate --color"
 alias grha="git reset --hard"
+alias gstash="git stash"
+alias gstashp="git stash pop"
 
 gcb() {
   git checkout -b $1;
