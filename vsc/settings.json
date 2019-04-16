@@ -3,5 +3,6 @@
     "window.zoomLevel": 2,
     "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace, Source Code Pro for Powerline",
     "terminal.external.linuxExec": "Terminal",
-    "workbench.iconTheme": "material-icon-theme"
+    "workbench.iconTheme": "material-icon-theme",
+    "explorer.openEditors.visible": 0
 }
