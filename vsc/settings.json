@@ -4,5 +4,9 @@
     "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace, Source Code Pro for Powerline",
     "terminal.external.linuxExec": "Terminal",
     "workbench.iconTheme": "material-icon-theme",
-    "explorer.openEditors.visible": 0
+    "explorer.openEditors.visible": 0,
+    "emmet.includeLanguages": {
+        "vue-html": "html",
+        "javascript": "javascriptreact"
+    }
 }
