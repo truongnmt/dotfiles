@@ -142,12 +142,7 @@ alias ..='cd ..'
 alias ...='cd ../..'
 
 # Quick cd
-alias cdc="cd ~/home/coding/"
-alias cdb="cd ~/go/src/github.com/mf-financial/wallet-btc"
-alias cde="cd ~/go/src/github.com/mf-financial/wallet-eth"
-alias cdek="cd ~/go/src/github.com/mf-financial/wallet-eth-keygen"
-alias cdes="cd ~/go/src/github.com/mf-financial/wallet-eth-sign"
-alias cdew="cd ~/go/src/github.com/mf-financial/wallet-eth-watch"
+alias cdc="cd ~/coding/"
 
 # Coding
 alias dc='docker'
