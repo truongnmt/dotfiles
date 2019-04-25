@@ -7,6 +7,8 @@ alias gl="git log --oneline --decorate --color"
 alias grha="git reset --hard"
 alias gstash="git stash"
 alias gstashp="git stash pop"
+alias gad="git add ."
+alias ga="git add"
 
 gcb() {
   git checkout -b $1;
@@ -15,9 +17,6 @@ gcb() {
 gc() {
   git checkout $1;
 }
-
-alias gad="git add ."
-alias ga="git add"
 
 gcmp() {
   git commit -m $1;

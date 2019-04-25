@@ -2,7 +2,7 @@
 echo "Setting up your Mac..."
 
 function install_dotfiles {
-  cp zsh/zshrc ~/.zshrc
+  cp zsh/.zshrc ~/.zshrc
 }
 
 function install_brew {
@@ -10,13 +10,28 @@ function install_brew {
   brew install caskroom/cask/brew-cask
 }
 
-function install_terminal {
+function install_zsh {
   brew install zsh
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
   git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
   git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
   # brew cask install iterm2
+}
+
+install_powerline {
+  # clone
+  git clone https://github.com/powerline/fonts.git --depth=1
+  # install
+  cd fonts
+  ./install.sh
+  # clean-up a bit
+  cd ..
+  rm -rf fonts
+}
+
+function install_oh_my_zsh {
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 }
 
 function install_ruby_on_rails {
@@ -46,8 +61,16 @@ function install_ruby_on_rails {
   rails -v
 }
 
+function install_zsh_plugins {
+  brew install zsh-syntax-highlighting
+  git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+}
+
+install_zsh
+install_powerline
+install_oh_my_zsh
+install_zsh_plugins
 install_dotfiles
-install_terminal
 install_brew
 install_ruby_on_rails
 
@@ -63,16 +86,16 @@ ln -s $HOME/.dotfiles/.mackup.cfg $HOME/.mackup.cfg
 
 # Set macOS preferences
 # We will run this last because this will reload the shell
-source .macos
-mackup restore
+# source .macos
+# mackup restore
 
-echo "[TODO] Sync setting with iterm"
+echo "[TODO] Import color for iterm"
 echo "[TODO] List of manually install apps:"
-echo "https://www.jetbrains.com/toolbox/app/"
-echo "https://github.com/kmikiy/SpotMenu"
-echo "https://zalo.me/may-tinh"
+# echo "https://www.jetbrains.com/toolbox/app/"
+# echo "https://github.com/kmikiy/SpotMenu"
+# echo "https://zalo.me/may-tinh"
 echo "https://itunes.apple.com/us/app/shazam/id897118787?l=fr&mt=12"
-echo "https://www.getpostman.com/apps"
+# echo "https://www.getpostman.com/apps"
 echo "http://rescuetime.com/"
-echo "https://kapeli.com/dash"
-echo "https://mindnode.com/"
+# echo "https://kapeli.com/dash"
+# echo "https://mindnode.com/"

@@ -1,6 +1,6 @@
 {
     "workbench.startupEditor": "newUntitledFile",
-    "window.zoomLevel": 2,
+    "window.zoomLevel": 1,
     "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace, Source Code Pro for Powerline",
     "terminal.external.linuxExec": "Terminal",
     "workbench.iconTheme": "material-icon-theme",
@@ -9,5 +9,6 @@
         "vue-html": "html",
         "javascript": "javascriptreact"
     },
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "telemetry.enableTelemetry": false
 }
