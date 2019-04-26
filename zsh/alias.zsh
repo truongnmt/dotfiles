@@ -9,6 +9,7 @@ alias gstash="git stash"
 alias gstashp="git stash pop"
 alias gad="git add ."
 alias ga="git add"
+alias glo="git log --oneline"
 
 gcb() {
   git checkout -b $1;
