@@ -66,6 +66,12 @@ function install_zsh_plugins {
   git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 }
 
+function install_node_npm {
+  brew install node
+  node -v
+  npm -v
+}
+
 install_zsh
 install_powerline
 install_oh_my_zsh
@@ -73,6 +79,7 @@ install_zsh_plugins
 install_dotfiles
 install_brew
 install_ruby_on_rails
+install_node_npm
 
 # Update Homebrew recipes
 brew update
@@ -91,6 +98,8 @@ ln -s $HOME/.dotfiles/.mackup.cfg $HOME/.mackup.cfg
 
 echo "[TODO] Import color for iterm"
 echo "[TODO] List of manually install apps:"
+echo "”Spectacle - Windows management"
+echo ”
 # echo "https://www.jetbrains.com/toolbox/app/"
 # echo "https://github.com/kmikiy/SpotMenu"
 # echo "https://zalo.me/may-tinh"
