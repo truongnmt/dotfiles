@@ -10,5 +10,6 @@
         "javascript": "javascriptreact"
     },
     "editor.formatOnSave": true,
-    "telemetry.enableTelemetry": false
+    "telemetry.enableTelemetry": false,
+    "workbench.colorTheme": "Dracula"
 }
