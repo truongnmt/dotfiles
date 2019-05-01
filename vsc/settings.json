@@ -11,5 +11,8 @@
     },
     "editor.formatOnSave": true,
     "telemetry.enableTelemetry": false,
-    "workbench.colorTheme": "Dracula"
+    "workbench.colorTheme": "Dracula",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "explorer.confirmDragAndDrop": false,
+    "sync.gist": "045b77d307e1595b39e971ede79531bf"
 }
