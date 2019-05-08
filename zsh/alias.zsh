@@ -143,7 +143,8 @@ alias ..='cd ..'
 alias ...='cd ../..'
 
 # Quick cd
-alias cdc="cd ~/coding/"
+alias cdc="cd ~/home/coding/"
+alias cdmf="cd ~/home/coding/moneyforward"
 
 # Coding
 alias dc='docker'
