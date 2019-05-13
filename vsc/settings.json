@@ -14,5 +14,11 @@
     "workbench.colorTheme": "Dracula",
     "javascript.updateImportsOnFileMove.enabled": "always",
     "explorer.confirmDragAndDrop": false,
-    "sync.gist": "045b77d307e1595b39e971ede79531bf"
+    "editor.minimap.enabled": false,
+    "sync.gist": "045b77d307e1595b39e971ede79531bf",
+    "gitlens.views.repositories.location": "gitlens",
+    "gitlens.views.fileHistory.location": "gitlens",
+    "gitlens.views.lineHistory.location": "gitlens",
+    "gitlens.views.compare.location": "gitlens",
+    "gitlens.views.search.location": "gitlens"
 }
