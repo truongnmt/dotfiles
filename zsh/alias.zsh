@@ -149,3 +149,6 @@ alias cdmf="cd ~/home/coding/moneyforward"
 # Coding
 alias dc='docker'
 alias dcc='docker-compose'
+function killport() { 
+  lsof -i TCP:$1 | grep LISTEN | awk '{print $2}' | xargs kill -9
+}
