@@ -10,6 +10,8 @@ alias gstashp="git stash pop"
 alias gad="git add ."
 alias ga="git add"
 alias glo="git log --oneline"
+alias gb="git branch"
+alias gcl="git clone"
 
 gcb() {
   git checkout -b $1;
@@ -152,3 +154,4 @@ alias dcc='docker-compose'
 function killport() { 
   lsof -i TCP:$1 | grep LISTEN | awk '{print $2}' | xargs kill -9
 }
+alias rr='rails routes'

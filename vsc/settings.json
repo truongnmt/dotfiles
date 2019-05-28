@@ -5,16 +5,11 @@
     "terminal.external.linuxExec": "Terminal",
     "workbench.iconTheme": "material-icon-theme",
     "explorer.openEditors.visible": 0,
-    "emmet.includeLanguages": {
-        "vue-html": "html",
-        "javascript": "javascriptreact"
-    },
     "editor.formatOnSave": true,
     "telemetry.enableTelemetry": false,
     "workbench.colorTheme": "Dracula",
     "javascript.updateImportsOnFileMove.enabled": "always",
     "explorer.confirmDragAndDrop": false,
-<<<<<<< HEAD
     "rubocop": {
         "lint": true, //enable all lint cops.
         "only": [ /* array: Run only the specified cop(s) and/or cops in the specified departments. */],
@@ -30,14 +25,15 @@
         "editor.formatOnSave": true
     },
     "ruby.format": "rubocop",
-    "sync.gist": "718de1083bdf2997084c71e5958ac9ec"
-=======
+    "sync.gist": "718de1083bdf2997084c71e5958ac9ec",
+    "files.autoSave": "afterDelay",
+    "files.associations": {
+        "*.erb": "erb"
+    },
     "editor.minimap.enabled": false,
-    "sync.gist": "045b77d307e1595b39e971ede79531bf",
-    "gitlens.views.repositories.location": "gitlens",
-    "gitlens.views.fileHistory.location": "gitlens",
-    "gitlens.views.lineHistory.location": "gitlens",
-    "gitlens.views.compare.location": "gitlens",
-    "gitlens.views.search.location": "gitlens"
->>>>>>> a63819ee33ec0233cded30292d9c541a9f24ed21
+    "emmet.includeLanguages": {
+        "vue-html": "html",
+        "javascript": "javascriptreact",
+        "erb": "html"
+    }
 }
