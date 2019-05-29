@@ -1,8 +1,0 @@
-<keymap version="1" name="Mac OS X 10.5+ copy" parent="Mac OS X 10.5+">
-  <action id="ReformatCode">
-    <keyboard-shortcut first-keystroke="shift meta l" />
-  </action>
-  <action id="rspec.LetIntroduce">
-    <keyboard-shortcut first-keystroke="shift meta alt r" />
-  </action>
-</keymap>
