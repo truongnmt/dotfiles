@@ -102,3 +102,7 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 prompt_dir() {
     prompt_segment blue black ".../%2~%<<"
 }
+
+bindkey "\e\eOD" backward-word 
+bindkey "\e\eOC" forward-word
+

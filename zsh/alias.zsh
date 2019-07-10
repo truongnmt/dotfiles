@@ -27,6 +27,10 @@ gcmp() {
   git push origin $branch_name;
 }
 
+gcm() {
+  git commit -m $1;
+}
+
 gcmap() {
   git commit --amend;
   branch_name=$(git symbolic-ref --short -q HEAD);
