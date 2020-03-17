@@ -1,0 +1,16 @@
+[color]
+	ui = true
+[user]
+	name = truongnmt
+	email = nguyen.manh.truong@moneyforward.co.jp
+[credential]
+	helper = osxkeychain
+[core]
+	excludesfile = /Users/nguyen.manh.truong/.gitignore_global
+	editor = nano
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true

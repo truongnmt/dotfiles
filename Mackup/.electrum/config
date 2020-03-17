@@ -1,0 +1,17 @@
+{
+    "auto_connect": true,
+    "config_version": 3,
+    "console-history": [],
+    "dark_icon": false,
+    "gui_last_wallet": "/Users/nguyen.manh.truong/.electrum/wallets/default_wallet",
+    "is_maximized": false,
+    "recently_open": [
+        "/Users/nguyen.manh.truong/.electrum/wallets/default_wallet"
+    ],
+    "rpcpassword": "y5b2looTZoU4SKyzIn1tAg==",
+    "rpcuser": "user",
+    "show_addresses_tab": true,
+    "show_console_tab": true,
+    "show_contacts_tab": true,
+    "show_utxo_tab": true
+}
