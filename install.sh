@@ -44,16 +44,6 @@ function install_ruby_on_rails {
   rbenv global 2.7.0
   ruby -v
 
-  git config --global color.ui true
-  git config --global user.name "TruongNM"
-  git config --global user.email "nguyen.manh.truong@moneyforward.co.jp"
-  ssh-keygen -t rsa -C "nguyen.manh.truong@moneyforward.co.jp"
-
-  cat ~/.ssh/id_rsa.pub
-  echo "Copy and paste the newly generated SSH key and add it to your Github account: https://github.com/settings/ssh"
-  
-  ssh -T git@github.com
-
   gem install rails -v 6.0.2.1
   rbenv rehash
 
