@@ -9,12 +9,12 @@ install_brew
 function install_zsh_ohmyzsh {
   echo "Installing zsh"
   brew install zsh
+
+  echo "Installing ohmyzsh and plugins"
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
   git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
   git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-
-  echo "Installing ohmyzsh"
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
+  
   echo "Installing iterm2"
   brew cask install iterm2
 }
@@ -56,14 +56,14 @@ function install_ruby_on_rails {
 
   sudo installer -pkg /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg -target /
 }
-install_ruby_on_rails
+#install_ruby_on_rails
 
 function install_node_npm {
   brew install node
   node -v
   npm -v
 }
-install_node_npm
+#install_node_npm
 
 # function install_dotfiles {
 #   cp zsh/.zshrc ~/.zshrc

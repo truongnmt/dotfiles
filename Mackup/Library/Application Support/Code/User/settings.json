@@ -35,6 +35,5 @@
         "vue-html": "html",
         "javascript": "javascriptreact",
         "erb": "html"
-    },
-    "sync.forceUpload": true
+    }
 }

@@ -22,17 +22,10 @@ chmod +x install.sh
 ./install.sh
 ```
 
-## Setting VSC config
-```
-mv ~/Library/Application\ Support/Code/User/settings.json ~/.dotfiles/vsc 
-mv ~/Library/Application\ Support/Code/User/keybindings.json ~/.dotfiles/vsc 
-mv ~/Library/Application\ Support/Code/User/snippets ~/.dotfiles/vsc 
+## Setting VSC
+- Install SettingSync extension (native feature comming soon)
+- GistID: 718de1083bdf2997084c71e5958ac9ec
 
-rm ~/Library/Application\ Support/Code/User/settings.json 
-rm ~/Library/Application\ Support/Code/User/keybindings.json 
-rm -R ~/Library/Application\ Support/Code/User/snippets 
+## Setup email
 
-ln -s ~/.dotfiles/vsc/settings.json ~/Library/Application\ Support/Code/User/settings.json 
-ln -s ~/.dotfiles/vsc/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json 
-ln -s ~/.dotfiles/vsc/snippets ~/Library/Application\ Support/Code/User/
-```
+## Browser sync
