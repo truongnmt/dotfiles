@@ -17,6 +17,9 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # Increase window resize speed for Cocoa applications
 defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
 
+# Disable popup showing accented characters
+defaults write -g ApplePressAndHoldEnabled -bool false
+
 ###############################################################################
 # Finder                                                                      #
 ###############################################################################
@@ -42,7 +45,7 @@ echo "Done. Note that some of these changes require a logout/restart to take eff
 ###############################################################################
 
 # Show only open applications in the Dock
-defaults write com.apple.dock static-only -bool true
+# defaults write com.apple.dock static-only -bool true
 
 # Group windows by application in Mission Control
 defaults write com.apple.dock expose-group-by-app -bool true
