@@ -65,28 +65,29 @@ function install_node_npm {
 }
 #install_node_npm
 
-# function install_dotfiles {
-#   cp zsh/.zshrc ~/.zshrc
-# }
-# install_dotfiles
+function install_dotfiles {
+  cp zsh/.zshrc ~/.zshrc
+}
+install_dotfiles
 
 # Install all our dependencies with bundle (See Brewfile)
 function install_homebrew_bundle {
   brew install mas
   brew bundle
 }
-install_homebrew_bundle
+# install_homebrew_bundle
 
 
 # Symlink the Mackup config file to the home directory
-ln -s $HOME/.dotfiles/.mackup.cfg $HOME/.mackup.cfg
+# ln -s $HOME/.dotfiles/.mackup.cfg $HOME/.mackup.cfg
 
 # Set macOS preferences
 # We will run this last because this will reload the shell
 source .macos
-mackup restore
+# mackup restore
 
 echo "[TODO] Import color for iterm"
+echo "[TODO] Iterm2: Pref -> General -> Load preferences from a custom folder or URL: select folder to dotfiles/iterms"
 echo "[TODO] zsh-autosuggestion"
 echo "[TODO] zsh-autocomplete, zshrc"
 echo "[TODO] xcode"
