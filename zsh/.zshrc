@@ -3,7 +3,7 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/$USER/.oh-my-zsh
-export DOTFILE=/Users/$USER/.dotfiles
+export DOTFILE=/Users/$USER/dotfiles
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -65,6 +65,7 @@ ZSH_THEME="agnoster"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
     zsh-autosuggestions
+    zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -95,14 +96,12 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source $DOTFILE/zsh/alias.zsh
-
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /Users/$USER/home/coding/tools/z/z.sh
 
 # Dir: current working directory
-prompt_dir() {
-    prompt_segment blue black ".../%2~%<<"
-}
+# prompt_dir() {
+    # prompt_segment blue black ".../%2~%<<"
+# }
 
-bindkey "\e\eOD" backward-word 
-bindkey "\e\eOC" forward-word
-
+#bindkey "\e\eOD" backward-word 
+#bindkey "\e\eOC" forward-word
