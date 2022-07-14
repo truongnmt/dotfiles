@@ -4,6 +4,8 @@ sudo xcodebuild -license accept
 ## Sign in to AppleID
 
 ## Setup Github ssh
+Login Github
+
 https://help.github.com/en/articles/adding-a-new-ssh-key-to-your-github-account
 
 ```bash
@@ -41,9 +43,12 @@ chmod +x m1_install.sh
   - Modifier: Caps -> Ctrl
 - Dock
   - Automatically hide and show the Dock
+  - Size -> drag it smaller
+  - Clock -> display second
 - Add internet accounts
 - Trackpad
   - Click: light
+  - Tap to click
   - Tracking speed: fast
   - More Gesture: App Expose
 - Accessibility
