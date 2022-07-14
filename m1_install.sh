@@ -3,7 +3,8 @@ echo "Setting up your Mac..."
 
 function install_brew {
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-  echo 'eval $(/opt/homebrew/bin/brew shellenv)' >> Users/$USER/.zprofile
+  
+  echo 'eval $(/opt/homebrew/bin/brew shellenv)' >> /Users/$USER/.zshrc
   eval $(/opt/homebrew/bin/brew shellenv)
 
   brew tap homebrew/cask-versions
@@ -75,9 +76,10 @@ function install_coding_tools {
   cd ~/home/coding/tools
   git clone git@github.com:rupa/z.git
 }
+install_coding_tools
 
 function install_dotfiles {
-  cp zsh/.zshrc ~/.zshrc
+  cp ./zsh/.zshrc ~/.zshrc
 }
 install_dotfiles
 
@@ -87,11 +89,6 @@ function install_homebrew_bundle {
   brew bundle
 }
 install_homebrew_bundle
-
-# Setup coding tools
-mkdir -p ~/home/coding/tools
-cd ~/home/coding/tools
-git clone git@github.com:rupa/z.git
 
 # Set macOS preferences
 # We will run this last because this will reload the shell
