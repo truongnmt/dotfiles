@@ -36,9 +36,16 @@ brew "github/gh/gh"
 # cask "skype"
 #cask "teamviewer"
 # cask "purevpn"
+
+cask "karabiner-elements"
+cask "openkey"
+cask "notion"
+cask "1password"
+cask "alt-tab"
+cask "authy"
+cask "visual-studio-code"
 cask "brooklyn"
 cask "docker"
-cask "openkey"
 cask "slack"
 cask "google-chrome"
 cask "rectangle"
@@ -52,10 +59,7 @@ cask "skitch"
 cask "ticktick"
 cask "grammarly"
 cask "contexts"
-cask "karabiner-elements"
-cask "notion"
-cask "authy"
-cask "visual-studio-code"
+
 # cask "microsoft-edge"
 # cask "muzzle"
 # cask "fanny"
@@ -63,8 +67,8 @@ cask "visual-studio-code"
 # cask "brave-browser"
 # cask "spotmenu"
 # brew "mackup"
-cask "goland"
-cask "rubymine"
+# cask "goland"
+# cask "rubymine"
 
 # mas "LastPass Password Manager", id: 926036361
 # mas "Shazam", id: 897118787
@@ -72,8 +76,8 @@ cask "rubymine"
 mas "GIPHY CAPTURE", id: 668208984
 mas "Irvue", id: 1039633667
 mas "LINE", id: 539883307
-mas "Microsoft Remote Desktop", id: 1295203466
-mas "Microsoft Remote Desktop", id: 715768417
+# mas "Microsoft Remote Desktop", id: 1295203466
+# mas "Microsoft Remote Desktop", id: 715768417
 mas "MeetingBar", id: 1532419400
 # mas "Numbers", id: 409203825
 # mas "Pages", id: 409201541
