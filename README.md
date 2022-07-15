@@ -45,6 +45,9 @@ chmod +x m1_install.sh
   - Automatically hide and show the Dock
   - Size -> drag it smaller
   - Clock -> display second
+- Mission Control
+  - Disable "Automatically rearrange Spaces based on most recent use"
+  - Group windows by application
 - Add internet accounts
 - Trackpad
   - Click: light
@@ -60,6 +63,11 @@ chmod +x m1_install.sh
 - Add license for Contexts
 - Login to Visual Studio Code
   - F1 -> Shell command, install `code` to PATH
+- Chrome
+  - Set up extensions
+- Finder
+  - Right click -> View -> Snap to grid, sort by name
+  - Bookmark home folder
 
 ## Setting VSC
 - Install SettingSync extension (native feature comming soon)
