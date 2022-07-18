@@ -41,6 +41,7 @@ chmod +x m1_install.sh
   - Shortcut -> Input Sources: Select next source in Input menu: cmd + shift + 2
   - OpenKey shortcut: cmd + shift + 1
   - Modifier: Caps -> Ctrl
+  - Text: Add period with double space
 - Dock
   - Automatically hide and show the Dock
   - Size -> drag it smaller
