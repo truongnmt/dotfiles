@@ -66,6 +66,7 @@ chmod +x m1_install.sh
   - F1 -> Shell command, install `code` to PATH
 - Chrome
   - Set up extensions
+  - chrome://extensions/shortcuts -> Rearrange Tabs: change to ⌃⌘ + hjkl
 - Finder
   - Right click -> View -> Snap to grid, sort by name
   - Bookmark home folder
