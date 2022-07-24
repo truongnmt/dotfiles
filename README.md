@@ -68,7 +68,7 @@ chmod +x m1_install.sh
   - Set up extensions
   - chrome://extensions/shortcuts -> Rearrange Tabs: change to ⌃⌘ + hjkl
 - Finder
-  - Right click -> View -> Snap to grid, sort by name
+  - Right click -> View -> Sort by name -> set as default
   - Bookmark home folder
 
 ## Setting VSC
