@@ -13,42 +13,42 @@ alias glo="git log --oneline"
 alias gb="git branch"
 alias gcl="git clone"
 
-gcb() {
-  git checkout -b $1;
+function gcb() {
+  git checkout -b $1
 }
 
-gc() {
+function gc() {
   git checkout $1;
 }
 
-gcmp() {
+function gcmp() {
   git commit -m $1;
   branch_name=$(git symbolic-ref --short -q HEAD);
   git push origin $branch_name;
 }
 
-gcm() {
+function gcm() {
   git commit -m $1;
 }
 
-gcmap() {
+function gcmap() {
   git commit --amend;
   branch_name=$(git symbolic-ref --short -q HEAD);
   git push origin $branch_name -f;
 }
 
-d.() {
+function gbd() {
   curr_branch=$(git symbolic-ref --short -q HEAD);
   git checkout develop;
   git br -D $curr_branch;
 }
 
-gplr() {
+function gplr() {
   curr_branch=$(git symbolic-ref --short -q HEAD);
   git pull upstream $curr_branch;
 }
 
-gplo() {
+function gplo() {
   curr_branch=$(git symbolic-ref --short -q HEAD);
   git pull origin $curr_branch;
 }
@@ -92,7 +92,7 @@ gfp() {
 #   git push origin $branch_name -f;
 # }
 
-grb() {
+function grb() {
   curr_branch=$(git symbolic-ref --short -q HEAD);
   git checkout $1;
   git pull upstream $1;
@@ -100,7 +100,7 @@ grb() {
   git rebase $1;
 }
 
-grc() {
+function grc() {
   git add .;
   git rebase --continue;
   branch_name=$(git symbolic-ref --short -q HEAD);
@@ -132,7 +132,7 @@ grc() {
 
 # System
 alias pls="sudo"
-alias rr="rm -rf"
+#alias rr="rm -rf"
 alias q="exit"
 alias c="clear"
 
@@ -149,8 +149,8 @@ alias ..='cd ..'
 alias ...='cd ../..'
 
 # Quick cd
-alias cdc="cd ~/home/coding/"
-alias cdmf="cd ~/home/coding/moneyforward"
+#alias cdc="cd ~/home/coding/"
+#alias cdmf="cd ~/home/coding/moneyforward"
 
 # Coding
 alias dc='docker'

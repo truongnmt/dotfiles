@@ -20,6 +20,12 @@ function install_zsh_ohmyzsh {
 }
 install_zsh_ohmyzsh
 
+function install_z {
+  echo "Installing z"
+  git clone https://github.com/rupa/z.git /Users/$USER/home/coding/tools/z/z.sh
+}
+install_z
+
 function install_powerline {
   # clone
   git clone https://github.com/powerline/fonts.git --depth=1
@@ -75,8 +81,7 @@ function install_homebrew_bundle {
   brew install mas
   brew bundle
 }
-# install_homebrew_bundle
-
+install_homebrew_bundle
 
 # Symlink the Mackup config file to the home directory
 # ln -s $HOME/.dotfiles/.mackup.cfg $HOME/.mackup.cfg
@@ -85,15 +90,3 @@ function install_homebrew_bundle {
 # We will run this last because this will reload the shell
 source .macos
 # mackup restore
-
-echo "[TODO] Import color for iterm"
-echo "[TODO] Iterm2: Pref -> General -> Load preferences from a custom folder or URL: select folder to dotfiles/iterms"
-echo "[TODO] zsh-autosuggestion"
-echo "[TODO] zsh-autocomplete, zshrc"
-echo "[TODO] xcode"
-echo "[TODO] jetbrain toolbox https://www.jetbrains.com/toolbox-app/"
-echo "[TODO] Lastpass extension https://lastpass.com/misc_download2.php"
-echo "[TODO] add license for Contexts"
-echo "[TODO] VirtualBox https://www.virtualbox.org/wiki/Downloads"
-echo "[TODO] golang https://golang.org/dl/"
-echo "[TODO] brave-browser"
