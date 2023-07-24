@@ -25,6 +25,12 @@ function install_zsh_ohmyzsh {
 }
 install_zsh_ohmyzsh
 
+function install_z {
+  echo "Installing z"
+  git clone https://github.com/rupa/z.git /Users/$USER/home/coding/tools/z/z.sh
+}
+install_z
+
 function install_powerline {
   # clone
   git clone https://github.com/powerline/fonts.git --depth=1
@@ -69,14 +75,6 @@ function install_node_npm {
   npm -v
 }
 #install_node_npm
-
-# Setup coding tools
-function install_coding_tools {
-  mkdir -p ~/home/coding/tools
-  cd ~/home/coding/tools
-  git clone git@github.com:rupa/z.git
-}
-install_coding_tools
 
 function install_dotfiles {
   cp ./zsh/.zshrc ~/.zshrc

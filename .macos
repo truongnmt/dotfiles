@@ -5,20 +5,53 @@
 osascript -e 'tell application "System Preferences" to quit'
 
 # Ask for the administrator password upfront
-sudo -v
+# sudo -v
 
 # Keep-alive: update existing `sudo` time stamp until `.macos` has finished
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+# while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 ###############################################################################
 # General UI/UX                                                               #
 ###############################################################################
 
+# Disable transparency in the menu bar and elsewhere on Yosemite
+defaults write com.apple.universalaccess reduceTransparency -bool true
+
+# Show battery percentage
+defaults write com.apple.menuextra.battery ShowPercent -bool true # @TODO: This is not working?
+
 # Increase window resize speed for Cocoa applications
-defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
+# defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
 
 # Disable popup showing accented characters
 defaults write -g ApplePressAndHoldEnabled -bool false
+
+###############################################################################
+# Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
+###############################################################################
+
+# Trackpad: enable tap to click for this user and for the login screen
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
+defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+
+# Trackpad: enable right click with two fingers
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRightClick -bool true
+defaults write com.apple.AppleMultitouchTrackpad TrackpadRightClick -bool true
+defaults -currentHost write NSGlobalDomain com.apple.trackpad.enableSecondaryClick -bool true
+defaults write com.apple.AppleMultitouchTrackpad TrackpadRightClick -bool true
+
+# Enable extra multifinger gestures (such as three finger swipe down = app expose)
+defaults write com.apple.dock showMissionControlGestureEnabled -bool true
+defaults write com.apple.dock showAppExposeGestureEnabled -bool true
+defaults write com.apple.dock showDesktopGestureEnabled -bool true
+defaults write com.apple.dock showLaunchpadGestureEnabled -bool true
+
+# Keyboard: set key repeat, fn to f1 f2...
+defaults write -g InitialKeyRepeat -int 15
+defaults write -g KeyRepeat -int 2
+defaults write -g com.apple.keyboard.fnState -bool true
 
 ###############################################################################
 # Finder                                                                      #
@@ -33,7 +66,13 @@ defaults write com.apple.finder ShowStatusBar -bool true
 # Finder: show path bar
 defaults write com.apple.finder ShowPathbar -bool true
 
-echo "Done. Note that some of these changes require a logout/restart to take effect."
+# Finder showX settings
+defaults write com.apple.finder ShowRecentTags -bool false
+defaults write com.apple.finder ShowSidebar -bool true
+defaults write com.apple.finder ShowStatusBar -bool true
+defaults write com.apple.finder ShowTabView -bool true
+defaults write com.apple.finder ShowPreviewPane -bool false
+defaults write com.apple.finder ShowPathbar -bool true
 
 # Enable snap-to-grid for icons on the desktop and in other icon views
 /usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:arrangeBy grid" $HOME/Library/Preferences/com.apple.finder.plist
@@ -44,10 +83,22 @@ echo "Done. Note that some of these changes require a logout/restart to take eff
 # Dock, Dashboard, and hot corners                                            #
 ###############################################################################
 
-# Show only open applications in the Dock
-# defaults write com.apple.dock static-only -bool true
+# Autohide dock
+defaults write com.apple.dock autohide -bool true
+
+# Minimize windows into their application’s icon
+defaults write com.apple.dock minimize-to-application -bool true
+
+# Don’t automatically rearrange Spaces based on most recent use
+defaults write com.apple.dock mru-spaces -bool false
 
 # Group windows by application in Mission Control
 defaults write com.apple.dock expose-group-by-app -bool true
 
 echo "Done. Note that some of these changes require a logout/restart to take effect."
+
+# Misc
+
+# AltTab settings
+defaults import com.lwouis.alt-tab-macos ./conf/alttab.plist
+

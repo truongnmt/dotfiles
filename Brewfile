@@ -60,6 +60,7 @@ cask "ticktick"
 cask "grammarly"
 #cask "contexts"
 cask "jetbrains-toolbox"
+cask "discord"
 
 # cask "microsoft-edge"
 # cask "muzzle"
