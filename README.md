@@ -66,6 +66,9 @@ chmod +x m1_install.sh
 - Iterm2: Pref -> General -> Load preferences from a custom folder or URL: select folder to dotfiles/iterms
   - import colors
   - keys set hotkey to show/hide window
+  - settings -> profiles -> keys -> presets -> Terminal.app compat (to use jump words)
+  - settings -> advanced -> mouse -> Scroll wheel sends arrow keys when in alternate screen mode (scroll in 
+vim, nano, etc)
 - Karabiner: Complex modifications: change right_command+hjkl to arrow keys
 - Login to Visual Studio Code
   - F1 -> Shell command, install `code` to PATH

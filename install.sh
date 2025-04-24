@@ -22,7 +22,7 @@ install_zsh_ohmyzsh
 
 function install_z {
   echo "Installing z"
-  git clone https://github.com/rupa/z.git /Users/$USER/home/coding/tools/z/z.sh
+  curl -L -o ~/.z https://raw.githubusercontent.com/rupa/z/master/z.sh
 }
 install_z
 
