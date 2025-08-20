@@ -21,7 +21,7 @@ function install_zsh_ohmyzsh {
   git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
   
   echo "Installing iterm2"
-  brew cask install iterm2
+  brew install iterm2
 }
 install_zsh_ohmyzsh
 

@@ -1,11 +1,3 @@
-tap "github/gh"
-tap "homebrew/bundle"
-tap "homebrew/cask"
-tap "homebrew/cask-fonts"
-tap "homebrew/cask-versions"
-tap "homebrew/core"
-tap "homebrew/services"
-
 # brew "awscli"
 # brew "azure-cli"
 # brew "boost"
@@ -39,28 +31,28 @@ brew "github/gh/gh"
 
 cask "karabiner-elements"
 cask "openkey"
-cask "notion"
-cask "1password"
+# cask "notion"
+# cask "1password"
 cask "alt-tab"
-cask "authy"
+# cask "authy"
 cask "visual-studio-code"
-cask "brooklyn"
-cask "docker"
+# cask "brooklyn"
+# cask "docker"
 cask "slack"
-cask "google-chrome"
-cask "rectangle"
+# cask "google-chrome"
+# cask "rectangle"
 cask "zoom"
-cask "telegram"
+# cask "telegram"
 cask "postman"
-cask "spotify"
+# cask "spotify"
 cask "itsycal"
 cask "sequel-ace"
 cask "skitch"
-cask "ticktick"
-cask "grammarly"
+# cask "ticktick"
+# cask "grammarly"
 #cask "contexts"
 cask "jetbrains-toolbox"
-cask "discord"
+# cask "discord"
 
 # cask "microsoft-edge"
 # cask "muzzle"
@@ -75,9 +67,9 @@ cask "discord"
 # mas "LastPass Password Manager", id: 926036361
 # mas "Shazam", id: 897118787
 # mas "feedly", id: 865500966
-mas "GIPHY CAPTURE", id: 668208984
-mas "Irvue", id: 1039633667
-mas "LINE", id: 539883307
+# mas "GIPHY CAPTURE", id: 668208984
+# mas "Irvue", id: 1039633667
+# mas "LINE", id: 539883307
 # mas "Microsoft Remote Desktop", id: 1295203466
 # mas "Microsoft Remote Desktop", id: 715768417
 mas "MeetingBar", id: 1532419400
