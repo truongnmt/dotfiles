@@ -44,6 +44,7 @@ chmod +x m1_install.sh
   - Shortcut -> Input Sources: Select next source in Input menu: cmd + shift + 2
   - Shortcut -> Mission Control: Switch to desktops
   - Services -> Text: Disable open man page in terminal, search man page index in terminal
+  - Screenshot: disable screen capture, only leave cmd+shift+5 option, replace with Shottr
   - OpenKey shortcut: cmd + shift + 1 j -> use default mac vi-vn
   - Modifier: Caps -> Ctrl
   - Text: Add period with double space

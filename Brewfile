@@ -28,7 +28,7 @@ brew "github/gh/gh"
 # cask "skype"
 #cask "teamviewer"
 # cask "purevpn"
-
+cask "shottr"
 cask "karabiner-elements"
 cask "openkey"
 # cask "notion"
